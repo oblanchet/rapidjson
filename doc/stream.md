@@ -127,7 +127,7 @@ Due to users' requests, RapidJSON provided official wrappers for `std::basic_ist
 
 ## IStreamWrapper {#IStreamWrapper}
 
-`IStreamWrapper` wraps any class drived from `std::istream`, such as `std::istringstream`, `std::stringstream`, `std::ifstream`, `std::fstream`, into RapidJSON's input stream.
+`IStreamWrapper` wraps any class derived from `std::istream`, such as `std::istringstream`, `std::stringstream`, `std::ifstream`, `std::fstream`, into RapidJSON's input stream.
 
 ~~~cpp
 #include <rapidjson/document.h>
@@ -231,7 +231,7 @@ FileWriteStream bos(fp, writeBuffer, sizeof(writeBuffer));
 typedef EncodedOutputStream<UTF32LE<>, FileWriteStream> OutputStream;
 OutputStream eos(bos, true);   // Write BOM
 
-Writer<OutputStream, UTF32LE<>, UTF8<>> writer(eos);
+Writer<OutputStream, UTF8<>, UTF32LE<>> writer(eos);
 d.Accept(writer);   // This generates UTF32-LE file from UTF-8 in memory
 
 fclose(fp);

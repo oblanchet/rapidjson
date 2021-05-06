@@ -3,6 +3,7 @@ include(CheckCXXCompilerFlag)
 set(UNITTEST_SOURCES
 	allocatorstest.cpp
     bigintegertest.cpp
+    clzlltest.cpp
 	cursorstreamwrappertest.cpp
     documenttest.cpp
     dtoatest.cpp
@@ -15,6 +16,7 @@ set(UNITTEST_SOURCES
     jsoncheckertest.cpp
     namespacetest.cpp
     pointertest.cpp
+    platformtest.cpp
     prettywritertest.cpp
     ostreamwrappertest.cpp
     readertest.cpp
